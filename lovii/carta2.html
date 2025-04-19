@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente de Carta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+            font-family: 'Lora', serif;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            margin: 0 0 20px 0;
+            color: #288080;
+            font-weight: 700; /* Título más grueso */
+            text-align: center;
+        }
+
+        .card-text p {
+            font-size: 1rem;
+            color: #333333;
+            margin: 0 0 10px 0;
+            font-weight: 900; /* Texto del poema con estilo más ligero */
+            line-height: 1.5;
+        }
+
+        .highlight {
+            font-weight: 700; /* Negritas para destacar ciertas frases */
+        }
+
+        .card-button {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0056b3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            font-weight: 700;
+        }
+
+        .card-button:hover {
+            background-color: #003d82;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="lover" alt="Imagen de la tarjeta">
+        <div class="card-content">
+            <h2 class="card-title">Para ti</h2>
+            <div class="card-text">
+                <p>No prometo ser perfecta,</p>
+                <p>pero sí mirarte como nadie,</p>
+                <p>quererte sin medida,</p>
+                <p>y hacer de tus días...</p>
+                <p>mi mejor poesía.</p>
+            </div>
+            <a href="#" class="card-button">Leer Más</a>
+        </div>
+    </div>
+</body>
+</html>

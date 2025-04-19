@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para vos Monito</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff0f5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff69b4;
+            margin-bottom: 40px;
+        }
+
+        .hearts {
+            display: flex;
+            gap: 40px;
+        }
+
+        .heart {
+            width: 50px;
+            height: 45px;
+            background-color: #ff0000;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: jump 0.8s ease-out forwards;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 45px;
+            background-color: #ff0000;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+
+        .heart:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .heart:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(100px) rotate(-45deg);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(-50px) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0) rotate(-45deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Te gusta???</h1>
+    <div class="hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+</body>
+</html>
